@@ -19,46 +19,46 @@ const pigLatin = require("./pigLatin.js");
 
 describe('#translate', function() {
 	it('translates a word beginning with a vowel', function() {
-		s = pigLatin.translate("apple");
+		s = pigLatin.translateString("apple");
 		expect(s).toEqual('appleay');
 	});
 
-	xit('translates a word beginning with a consonant', function() {
-		s = pigLatin.translate("banana");
+	it('translates a word beginning with a consonant', function() {
+		s = pigLatin.translateString("banana");
 		expect(s).toEqual("ananabay");
 	});
 
-	xit('translates a word beginning with two consonants', function() {
-		s = pigLatin.translate("cherry");
+	it('translates a word beginning with two consonants', function() {
+		s = pigLatin.translateString("cherry");
 		expect(s).toEqual('errychay');
 	});
 
-	xit('translates two words', function() {
-		s = pigLatin.translate("eat pie");
+	it('translates two words', function() {
+		s = pigLatin.translateString("eat pie");
 		expect(s).toEqual('eatay iepay');
 	});
 
-	xit('translates a word beginning with three consonants', function() {
-		expect(pigLatin.translate("three")).toEqual("eethray");
+	it('translates a word beginning with three consonants', function() {
+		expect(pigLatin.translateString("three")).toEqual("eethray");
 	});
 
-	xit('counts "sch" as a single phoneme', function() {
-		s = pigLatin.translate("school");
+	it('counts "sch" as a single phoneme', function() {
+		s = pigLatin.translateString("school");
 		expect(s).toEqual("oolschay");
 	});
 
-	xit('counts "qu" as a single phoneme', function() {
-		s = pigLatin.translate("quiet");
+	it('counts "qu" as a single phoneme', function() {
+		s = pigLatin.translateString("quiet");
 		expect(s).toEqual("ietquay");
 	});
 
-	xit('counts "qu" as a consonant even when its preceded by a consonant', function() {
-		s = pigLatin.translate("square");
+	it('counts "qu" as a consonant even when its preceded by a consonant', function() {
+		s = pigLatin.translateString("square");
 		expect(s).toEqual("aresquay");
 	});
 
-	xit('translates many words', function() {
-		s = pigLatin.translate("the quick brown fox");
+	it('translates many words', function() {
+		s = pigLatin.translateString("the quick brown fox");
 		expect(s).toEqual("ethay ickquay ownbray oxfay");
 	});
 });
